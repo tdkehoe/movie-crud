@@ -1,0 +1,36 @@
+body {
+  font-family: sans-serif;
+  /*background-color: green;*/
+}
+
+header {
+  color: white;
+  background-color: black;
+  padding: 5px;
+  font-size: 10pt;
+}
+
+main {
+  font-size: 9pt;
+}
+
+input {
+  color: white;
+  background-color: gray;
+}
+
+.tableHeader {
+  font-weight: bold;
+}
+
+.inputField {
+  color: gray;
+  background-color: white;
+}
+
+.year {
+    text-align: center;
+}
+.rating {
+  text-align: center;
+}

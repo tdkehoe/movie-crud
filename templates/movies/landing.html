@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/public/style.css">
+    <title>Landing</title>
+  </head>
+  <body>
+
+    <header>
+      <h1>Welcome to the Cruddy Movies Database (CMDB)</h1>
+    </header>
+
+    <main>
+      <br>
+      <form class="" action="/movies" method="GET">
+        <input type="submit" name="index" value="See All Cruddy Movies"></input>
+      </form>
+      <br>
+      {{#movies}}
+        <a href='/movies/{{_id}}/show'><img src="{{poster}}" alt="movie poster" height="150"/></a>
+      {{/movies}}
+
+    </main>
+
+  </body>
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/public/style.css">
+    <title>Show</title>
+  </head>
+  <body>
+
+    <header>
+      <h3><a href="/movies">Show All Cruddy Movies</a></h3>
+    </header>
+
+    <main>
+      {{#movies}}
+        <h2>{{title}}</h2>
+
+        <table>
+          <!-- <tr>
+            <td class="addMovie">Title</td><td>{{title}}</td>
+          </tr> -->
+          <tr>
+            <td class="tableHeader">Who To Blame</td><td>{{director}}</td>
+          </tr>
+          <tr>
+            <td class="tableHeader">Synopsis</td><td>{{synopsis}}</td>
+          </tr>
+          <tr>
+            <td class="tableHeader">Year</td><td>{{year}}</td>
+          </tr>
+          <tr>
+            <td class="tableHeader">Rating</td><td>{{rating}}</td>
+          </tr>
+          <tr>
+                <td>
+                  <form class="" action="/movies/{{_id}}/edit" method="GET">
+                    <input type="submit" name="edit" value="Edit"></input>
+                  </form>
+                </td>
+                <td>
+                  <form class="" action="/movies/{{_id}}/delete" method="POST">
+                    <input type="submit" name="delete" value="Delete"></input>
+                  </form>
+                </td>
+          </tr>
+        </table>
+        <img src="{{poster}}" alt="movie poster" width="300"/>
+      {{/movies}}
+    </main>
+
+  </body>
+</html>

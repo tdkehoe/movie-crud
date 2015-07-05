@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/public/style.css">
+    <title>Index</title>
+  </head>
+  <body>
+
+    <header>
+      <h1>The Cruddiest Movies of All Time</h1>
+    </header>
+
+    <main>
+
+      <table>
+        <tr>
+          <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+          <td colspan="2"><form class="" action="/movies/new" method="GET">
+                <input type="submit" name="new" value="Add New Movie"></input>
+              </form></td>
+
+
+        </tr>
+        <tr class="tableHeader">
+          <td>Title</td><td>Who To Blame</td><td class="year">Year</td><td class="rating">Rating</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+        </tr>
+          {{#movies}}
+            <tr>
+            <td><a href='/movies/{{_id}}/show'>{{title}}</a></td>
+            <td>{{director}}</td>
+            <td class="year">{{year}}</td>
+            <td class="rating">{{rating}}</td>
+            <td><form class="" action="/movies/{{_id}}/edit" method="GET">
+                  <input type="submit" name="edit" value="Edit"></input>
+                </form></td>
+            <td><form class="" action="/movies/{{_id}}/delete" method="POST">
+                  <input type="submit" name="delete" value="Delete"></input>
+                </form></td>
+            <td>&nbsp;</td>
+            </tr>
+          {{/movies}}
+
+        <tr>
+          <td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td><td>&nbsp;</td>
+          <td colspan="2"><form class="" action="/movies/landing" method="GET">
+            <input type="submit" name="landingPage" value="Back To Landing Page"></input>
+          </form></td>
+        </tr>
+
+        </table>
+
+    </main>
+
+  </body>
+</html>
