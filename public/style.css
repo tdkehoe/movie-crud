@@ -34,3 +34,11 @@ input {
 .rating {
   text-align: center;
 }
+
+table {
+  border-collapse: collapse;
+}
+
+tr.border_bottom {
+  border-bottom: 0.5cd pt solid black;
+}

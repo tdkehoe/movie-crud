@@ -41,14 +41,11 @@ routes.addRoute('/movies/new', function (req, res, url) { // url is never used
     res.end(template);
   }
   if (req.method === 'POST') {
-    console.log("Thanks for the new movie.")
     var data = '';
     req.on('data', function(chunk){
       data += chunk;
     });
-    if (data) {console.log(data); }
-    else {console.log("No data received.")}
-    req.on('end', function(){
+      req.on('end', function(){
       var movie = qs.parse(data);
       movies.insert(movie, function(err, doc) { // doc is never used
         if (err) {res.end('error'); }
